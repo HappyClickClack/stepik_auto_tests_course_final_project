@@ -12,6 +12,8 @@ class ProductPageLocators():
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main>.price_color") # Item price
     PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main>h1") # Item name
     BASKET_LINK = (By.CSS_SELECTOR, ".basket-mini>.btn-group>a.btn-default") # Link (or button) to show the basket page
+    NOTIFICATION_PRODUCT_NAME = (By.CSS_SELECTOR, "#messages .alertinner>strong") # Product name in Notification
+    NOTIFICATION_PRODUCT_PRICE = (By.CSS_SELECTOR, ".alert-info .alertinner strong") # Product price in Notification
 
 class BasketPageLocators():
     BASKET_PRODUCT_NAME = (By.CSS_SELECTOR, ".basket-items h3>a") # Item name in basket
