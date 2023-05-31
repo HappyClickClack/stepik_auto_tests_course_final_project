@@ -30,7 +30,7 @@ class BasePage():
             return False
         return True
         
-    def get_element(self, method, css_selector, error_message):
+    def get_element(self, method, css_selector, error_message = ''):
         try:
             return self.browser.find_element(method, css_selector)
         except (NoSuchElementException):
@@ -53,6 +53,9 @@ class BasePage():
             return False # the element has NOT disappeared from the page within the given time
 
         return True
+
+    def go_to_basket_page(self):
+        self.get_element(*BasePageLocators.BASKET_LINK, r'View basket" button is not presented!').click()
         
     def solve_quiz_and_get_code(self):
         try:

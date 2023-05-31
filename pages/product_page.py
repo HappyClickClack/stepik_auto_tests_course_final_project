@@ -24,9 +24,6 @@ class ProductPage(BasePage):
            r'Product name in Notification does not match item added!'
         assert self.product_price == self.get_element(*ProductPageLocators.NOTIFICATION_PRODUCT_PRICE, r'Notification with product price is not presented!').text.strip(),\
            r'Product price in Notification does not match item added!'
-
-    def go_to_basket_page(self):
-        self.get_element(*ProductPageLocators.BASKET_LINK, r'View basket" button is not presented!').click()
         
     def should_not_be_success_message(self):
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \

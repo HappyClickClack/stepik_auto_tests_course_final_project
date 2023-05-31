@@ -62,3 +62,19 @@ def test_message_disappeared_after_adding_product_to_basket(browser):
     page.open()
     page.add_product_to_basket(check_details = False)
     page.should_disappear_success_message()
+
+@pytest.mark.latest  
+def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
+    """
+    1. Гость открывает главную страницу 
+    2. Переходит в корзину по кнопке в шапке сайта
+    3. Ожидаем, что в корзине нет товаров
+    4. Ожидаем, что есть текст о том что корзина пуста 
+    """
+    link = "http://selenium1py.pythonanywhere.com"
+    page = MainPage(browser, link, 0)
+    page.open()
+    page.go_to_basket_page()
+    basket_page = BasketPage(browser, browser.current_url)
+    basket_page.should_be_empty_basket()
+    
