@@ -75,3 +75,6 @@ class BasePage():
         except NoAlertPresentException:
             #print("No second alert presented")        
             pass
+           
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), r'User icon is not presented, probably unauthorized user!'
