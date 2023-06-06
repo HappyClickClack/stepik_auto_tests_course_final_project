@@ -1,5 +1,5 @@
 import math
-from ..helper.locators import BasePageLocators
+from .locators import BasePageLocators
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import TimeoutException

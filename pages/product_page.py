@@ -1,5 +1,5 @@
 from .base_page import BasePage
-from ..helper.locators import ProductPageLocators
+from .locators import ProductPageLocators
 
 class ProductPage(BasePage):
     def add_product_to_basket(self, check_details = True):
