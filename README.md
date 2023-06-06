@@ -9,7 +9,7 @@
 Чтобы проверить правильность установки, откройте командную строку  Windows (Пуск - Найти программу - cmd.exe и Запустить). В консоли  введите python --version (на некоторых сборках Windows нужно вводить  короткую команду, например, py --version):
 ```
 python --version
-Python 3.7.3
+Python 3.10.11
 ```
 - Создайте папку, где будут храниться наши виртуальные окружения, и перейдите в неё:
 ```
@@ -18,9 +18,9 @@ cd environments
 ```
 Создадим виртуальное окружение:
 ```
-python -m venv selenium_env
+py -m venv selenium_env
 ```
-Запустим созданный для нас приложением venv файл activate.bat, чтобы активировать окружение:
+- Запустим созданный для нас приложением venv файл activate.bat, чтобы активировать окружение:
 ```
 selenium_env\Scripts\activate.bat
 ```
@@ -30,8 +30,10 @@ git clone https://github.com/HappyClickClack/stepik_auto_tests_course_final_proj
 ```
 - Установите зависимости. В виртуальном окружении выполните:
 ```
+cd stepik_auto_tests_course_final_project
 pip install -r requirements.txt
 ```
+
 - Установите драйвер для браузера: Windows. Для этого откройте сайт https://sites.google.com/chromium.org/driver/ (старая версия сайта https://sites.google.com/a/chromium.org/chromedriver/downloads)  и скачайте ту версию ChromeDriver, которая соответствует версии вашего  браузера. Чтобы узнать версию браузера, откройте новое окно в Chrome, в  поисковой строке наберите: chrome://version/ и нажмите Enter. В верхней  строчке вы увидите информацию про версию браузера. Разархивируйте скачанный файл. Создайте в папке `environments` (см выше) папку chromedriver и положите разархивированный ранее файл chromedriver.exe.
 Добавьте в системную переменную PATH путь к chromedriver. Как это сделать в разных версиях Windows, описано здесь: https://www.computerhope.com/issues/ch000549.htm. 
 Или можно прописать путь к драйверу в скрипте (не реализовано в этом репо.):
