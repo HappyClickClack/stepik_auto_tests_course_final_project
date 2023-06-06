@@ -28,6 +28,8 @@ selenium_env\Scripts\activate.bat
 ```
 git clone https://github.com/HappyClickClack/stepik_auto_tests_course_final_project
 ```
+(_GIT client for win_: https://git-scm.com/download/win)
+  
 - Установите зависимости. В виртуальном окружении выполните:
 ```
 cd stepik_auto_tests_course_final_project
